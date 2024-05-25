@@ -52,7 +52,7 @@ all these while creating the sushi website with,
 - Profile Section
 - About Me Section
 - Skills Section
-- Contact Me Section
+- Contact Me Section & Footer
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
