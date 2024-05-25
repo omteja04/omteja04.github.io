@@ -527,7 +527,7 @@ footer p {
 .nav-container,
 .nav-container-mobile {
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .nav-container img {
