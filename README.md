@@ -75,7 +75,7 @@ git clone https://github.com/omteja04/omteja.github.io.git
 **Navigate to the project directory:**
 
 ```bash
-cd sushi-shinobi
+cd omteja.github.io
 ```
 
 ## <a name="snippets">🕸️ Snippets</a>
