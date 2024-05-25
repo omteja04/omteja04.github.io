@@ -5,6 +5,15 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+document.body.addEventListener('click', function (event) {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+        menu.classList.remove("open");
+        icon.classList.remove("open");
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const moonIcons = document.querySelectorAll('#moon, #moon-mobile');
     const sunIcons = document.querySelectorAll('#sun, #sun-mobile');
