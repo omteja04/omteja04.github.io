@@ -1,0 +1,229 @@
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,10pt]{article}
+% \usepackage[a4paper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% Use Times New Roman
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% \usepackage{mathptmx} % Times New Roman
+
+% Uncomment the next line to use Arial instead
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+\setlength{\baselineskip}{15pt} % spacing between lines
+% \setlength{\lineskip}{5pt}      % additional spacing between lines
+\usepackage{enumitem} % For customizing lists
+
+% Set spacing between items in itemize environment
+\setlist[itemize]{itemsep=3pt} % Adjust the length as needed
+% \setlist[itemize]{topsep=1pt} % Adjust the length as needed
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+% Custom \section
+\definecolor{MyBlue}{RGB}{69, 66, 254}
+\definecolor{bullets}{RGB}{89, 89, 89}
+\titleformat{\section}{\normalfont\large\bfseries\raggedright}{}{0em}{}[{\color{gray!40}\titlerule[0.8pt]}]
+\titlespacing{\section}{0pt}{4pt}{5pt}
+
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage{soul} % for more flexible underlining
+
+
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{blackcolour}{rgb}{0,0,0}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+\usepackage{ragged2e} % Load the ragged2e package
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+% Setup hyperref package, and colors for links
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{blackcolour}{rgb}{0,0,0}
+\hypersetup{
+    colorlinks,
+    breaklinks,
+    urlcolor=linkcolour,
+    linkcolor=linkcolour
+}
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\hypersetup{urlcolor=blackcolour, linkcolor=blackcolour}
+\begin{tabularx}{\linewidth}{@{} C @{}}
+{\textbf{\Huge{OMTEJA YALLAPRAGADA}}} \\[7.5pt]
+\href{tel:+916305700243}{+91 6305700243} \ $|$ \ 
+\href{mailto:yallapragadaomteja@gmail.com}{yallapragadaomteja@gmail.com}\ $|$ \ 
+\href{https://linkedin.com/in/omteja}{linkedin.com/in/omteja} \ $|$ \
+\href{https://github.com/omteja04}{github.com/omteja04}  \\
+% \href{https://omteja04.github.io}{\raisebox{-0.05\height}\faGlobe \ my-portfolio} \\[2pt] 
+% \hypersetup{urlcolor=blackcolour, linkcolor=blackcolour}
+\end{tabularx} 
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+% \section{Summary}
+% \begin{tabularx}{\linewidth}{@{}X @{}}	
+%     Innovative \textbf{Software Engineer} with a solid foundation in \textbf{programming}, \textbf{problem-solving}. Proficient in multiple \textbf{programming languages} and \textbf{development tools}, interested in \textbf{Web Development} and currently learning  \textbf{AWS Cloud Development}. Eager to collaborate with cross-functional teams to deliver innovative products. Seeking opportunities to apply and expand skills in dynamic environments.
+% \end{tabularx}
+
+
+
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2022 --- Present & B.Tech. (C.S.E) at \textbf{Aditya College of Engineering and Technology}  \hfill \textcolor{Gray} \hfill \normalsize CGPA: 8.43 \\
+
+2022 & Class 12th, Andhra Pradesh State Board \hfill 95.3\% \\
+% 2020 & Class 10th, Andhra Pradesh State Board \hfill (100\%) 
+\end{tabularx}  \\[-0.4em]
+
+
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Tech Stack}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Core} & \textcolor{bullets}{Data Structures, Algorithms, OOP, DBMS} \\
+\textbf{Programming Languages} & \textcolor{bullets}{C / C++, Java, Python} \\
+\textbf{Front-End Tools} & \textcolor{bullets}{HTML5, CSS3, JavaScript} \\
+\textbf{Databases} & \textcolor{bullets}{MySQL} \\
+\textbf{System Skills} & \textcolor{bullets}{Linux} \\
+\textbf{Developer Tools} & \textcolor{bullets}{Git, GitHub, Markdown, REST APIs, Figma}  \\
+\textbf{Technologies} & \textcolor{bullets}{AWS Cloud Development}  \\[-0.2em]
+
+
+\end{tabularx}
+% \vspace{-0.4em} % Reduce space before the next section
+%Projects
+%----------------------------------------------------------------------------------------
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{} X  @{} }
+    \textbf{My-Portfolio - An Interactive Resume Website} \hfill \href{https://omteja04.github.io/}{\underline{Live Demo}}  \ $|$ \ \href{https://github.com/omteja04/omteja04.github.io}{\underline{Source Code}}  \\[-0.3em]
+    \begin{itemize}
+        \item \textcolor{bullets}{Developed a responsive portfolio website ensuring compatibility across various screen sizes and devices.}
+        \item \textcolor{bullets}{Created an interactive platform where users can download my resume, view projects \& explore earned certifications.}
+        \item {HTML5, CSS3, JavaScript}
+    \end{itemize} \\
+    
+    \textbf{Sushi-Shinobi - A Front-end Landing Page} \hfill \href{https://sushi-shinobi.vercel.app/}{\underline{Live Demo}}  \ $|$ \ \href{https://github.com/omteja04/sushi-shinobi}{\underline{Source Code}}  \\[-0.3em]
+    \begin{itemize}
+        \item \textcolor{bullets}{Developed a comprehensive and user-friendly landing page of a restaurant with impressive performance in all devices.}
+        \item \textcolor{bullets}{Implemented smooth scroll animations significantly enhancing the user experience by adding interactive elements.}
+        \item {HTML5, CSS3, JavaScript library --- AOS (Animate On Scroll)}
+    \end{itemize} \\
+    \textbf{levi.ly - URL Shortener} \hfill \href{https://omteja04.github.io/levi}{\underline{Live Demo}}  \ $|$ \ \href{https://github.com/omteja04/levi}{\underline{Source Code}}  \\[-0.3em]
+    \begin{itemize}
+        \item \textcolor{bullets}{Designed and Built a Serverless URL Shortener featuring a simple user-friendly web interface, which efficiently converts long URLs into shortened links.}
+        \item \textcolor{bullets}{Although the project has been temporarily deactivated to manage costs, it can be reactivated for demonstrations.}
+        \item AWS Lambda, DynamoDB, API Gateway, JavaScript, HTML, CSS.
+    \end{itemize} \\
+    
+    \textbf{Inventory Management System - Java Based Application} \hfill\href{https://github.com/omteja04/InventoryManagementSystem}{\underline{Source Code}}  \\[-0.3em]
+    \begin{itemize}
+        \item \textcolor{bullets}{Built a Java application utilizing Java Database Connectivity and GUI frameworks for managing inventory operations.}
+        \item \textcolor{bullets}{Focused on adding, deleting, and organizing the inventory.}
+        \item {JDBC, Java GUI Frameworks --- SWING, AWT, Database --- MySQL}
+    \end{itemize}
+    
+\end{tabularx}
+
+
+%Internships
+%---------------------------------------------------------------------------------------
+\section{Internships}
+\begin{tabularx}{\linewidth}{ @{} X @{} }
+\textbf{AWS Cloud Development Intern} \hfill (May 2024 – July 2024) \\
+\small \textbf{Technical Hub} --- \emph{provides training aligned with certifications} \\[-0.3em]
+    \begin{itemize}
+       \item \textcolor{bullets}{Learned AWS Cloud fundamentals and development concepts.}
+       \item \textcolor{bullets}{Enhanced understanding and gained hands-on experience with a range of AWS services, including Amazon EC2, AWS Lambda, Amazon S3, and DynamoDB.}
+        % \item  {\textbf{Postman API Fundamentals Student Expert}} 
+        \item \textcolor{bullets}{Earned the } \href{https://rb.gy/yomey5}{\textbf{Postman API Fundamentals Student Expert}} \textcolor{bullets}{ badge for expertise in API development and testing.}
+
+    \end{itemize} 
+\end{tabularx}
+
+\vspace{-0.9em} % Reduce space before the next section
+%---------------------------------------------------------------------------------------
+\section{Competency}
+\begin{tabularx}{\linewidth}{@{} X@{}}	
+    \textbf{LeetCode:} Successfully Solved \textbf{460+ Problems}, Max. Contest Rating \textbf{1606*} \hfill \href{https://www.leetcode.com/omteja04}{\underline{omteja04}} \\
+    \textbf{GeeksforGeeks:} Solved \textbf{400+ problems}, \textbf{Campus Rank 131}, Max. Contest Rating \textbf{1785*} \hfill \href{https://www.geeksforgeeks.org/user/omteja04/}{\underline{omteja04}} \\
+    \textbf{Codeforces:} \textbf{Newbie}, Max. Contest  Rating \textbf{1127*}
+    \hfill  \href{https://codeforces.com/profile/omteja04}{\underline{omteja04}} \\
+    \textbf{CodeChef:} \textbf{2 Star}, Max. Contest Rating \textbf{1462*} \hfill \href{https://www.codechef.com/users/omteja04}{\underline{omteja04}} \\
+    \textbf{HackerRank:} \textbf{5 Star} in Data Structures and Algorithms, C, C++, Java, Python \hfill \href{https://www.hackerrank.com/profile/omteja04}{\underline{omteja04}} \\
+\end{tabularx}
+%-----------------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{} l X@{}}
+    \href{https://rhtapps.redhat.com/verify?certId=240-110-783}{\textbf{Red Hat Certified System Administrator}} (RHCSA) & \textcolor{bullets}{\emph{Red Hat}} \\
+    IT Specialist in \href{https://www.credly.com/badges/aea2b491-a0e3-4ed8-8e4b-2da4ec311639/public_url}{\textbf{HTML \& CSS}}, \href{https://www.credly.com/badges/17ee233e-54bd-4955-94a4-999a9468809f/public_url}{\textbf{JAVA}} &  \textcolor{bullets}{\emph{Certiport Pearson}}
+\end{tabularx}
+% \hypersetup{urlcolor=blackcolour, linkcolor=blackcolour}
+%--------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\vfill
+
+\end{document}
